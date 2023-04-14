@@ -1,0 +1,36 @@
+* { box-sizing: border-box;
+}
+
+
+.question-container {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    border: 30px;
+    box-shadow: aquamarine;
+    
+
+}
+header{
+   
+}
+
+.btn {
+    justify-content: center;
+}
+
+.timer-container{
+    padding: 20px solid green;
+    border: 20px solid red;
+    margin: 30px solid black;
+}
+
+#count #start-btn {
+    justify-content: center;
+    justify-items: center;
+}
