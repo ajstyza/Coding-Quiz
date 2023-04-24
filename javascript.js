@@ -15,11 +15,11 @@ function startQuiz() {
         var timeLeft = 60;
         var timeInterval = setInterval(function() {
        if(timeLeft > 1) {
-        timeEl.textContent = timeLeft + 'seconds remaing';
+        timeEl.textContent = timeLeft + ' seconds remaining';
         timeLeft--;
        }
        else if(timeLeft === 1) {
-        timeEl.textContent = timeLeft + 'seconds remaining';
+        timeEl.textContent = timeLeft + ' seconds remaining';
         timeLeft--;
        }
        else if(timeLeft < 1) {
@@ -29,46 +29,37 @@ function startQuiz() {
         }, 1000);
     }
     
- //   
+ //  
 
 // var output = document.getElementById("output");
 
+// working with question/answer objects.
+var questionContainer = document.querySelector(".question-container");
+ questionContainer.addEventListener('click', function(event){
+    var element = event.target;
 
-function Answer() {
-    console.log("button has been clicked")    
-}
+    if (element.matches("button")) && () {
 
-function showQuestion(questions){
+       //console.log("button clicked");
 
-}
-// working with question and answer container
+   }
+ });
 
+ function Answer() {
 
-
-
-var optionButton = document.querySelectorAll("option-btn");
-    optionButton.addEventListener('click', Answer);
-
- questionContainer.addEventListener('click', function(event))
-var element = event.target;
-
-
+ }
 
  
-var questions = {
-    
-        question1: "What does CSS stand for?",
-        choices1: ["Cascading Style Strands","Cucumbers-Salamanders-Squash","Cascading Style Sheets","It stands for nothing because it has no beliefs"],
-        answer1: "Cascading Style Sheets",
-    
+var questions = {  
+        question: "What does CSS stand for?",
+        choices: ["Cascading Style Strands","Cucumbers-Salamanders-Squash","Cascading Style Sheets","It stands for nothing because it has no beliefs"],
+        answer: "Cascading Style Sheets",   
 } 
 
-if (answer1){
+localStorage.setItem("questions", JSON.stringify(questions))
+ });
 
-}
-
-
-
+function ShowQuestion()
 
     //use querySelectorAll make sure to loop thru the whole array so all buttons work 
 
