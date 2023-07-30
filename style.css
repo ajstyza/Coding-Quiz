@@ -12,21 +12,24 @@
     padding: 20px;
     margin: 30px;
     border: 30px;
-    box-shadow: aquamarine;
     
 
 }
+
 header{
    
 }
 
-.btn {
-    justify-content: center;
+.option-btn{
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding: 20px;
+
 }
 
 .timer-container{
     padding: 20px solid green;
-    border: 20px solid red;
+    border: 20px solid cadetblue;
     margin: 30px solid black;
 }
 

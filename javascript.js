@@ -1,8 +1,21 @@
+
+var btn1 = document.getElementById('btn1');
+btn1.addEventListener('click', displayWrongResult);
+var btn2 = document.getElementById('btn2');
+btn2.addEventListener('click', displayWrongResult);
+var btn3 = document.getElementById('btn3');
+btn3.addEventListener('click', showQuestion2, displayCorrectResult);
+var btn4 = document.getElementById('btn4');
+btn4.addEventListener('click', displayWrongResult);
+// 
 var startButton = document.getElementById('start-btn');
 startButton.addEventListener('click', startQuiz);
 var questionContainer = document.querySelector(".question-container");
 questionContainer.style.display = "none";
-
+var rightContainer = document.querySelector('.rightContainer');
+rightContainer.style.display = "none";
+var wrongContainer = document.querySelector('.wrongContainer');
+wrongContainer.style.display = "none";
 // this function reveals the questions and begins timer upon pressing start button.
 function startQuiz() {
     questionContainer.style.display = "block";
@@ -29,65 +42,54 @@ function startQuiz() {
         }, 1000);
     }
     
- //  
 
-// var output = document.getElementById("output");
-
-// working with question/answer objects.
-var questionContainer = document.querySelector(".question-container");
- questionContainer.addEventListener('click', function(event){
-    var element = event.target;
-
-    if (element.matches("button")) && () {
-
-       //console.log("button clicked");
-
-   }
- });
-
- function Answer() {
-
- }
-
- 
-var questions = {  
-        question: "What does CSS stand for?",
+const question1 = {  
+        questionChoice1: "What does CSS stand for?",
         choices: ["Cascading Style Strands","Cucumbers-Salamanders-Squash","Cascading Style Sheets","It stands for nothing because it has no beliefs"],
         answer: "Cascading Style Sheets",   
-} 
+};
+const question2 = {
+        questionChoice2: "What does HTML stand for?",
+        choices2: ["Hyper Text Main Portal", "Hyper Toast Main Pudding", "Hyphen Trophy Miniscule Lemmings", "Hyper Text Transport Protocol"],
+        answer2: "Hyper Text Transport Protocol",
+} ;   
+console.log (question1.choices[1]);
 
-localStorage.setItem("questions", JSON.stringify(questions))
- });
+function showQuestion1() {
+    document.getElementById('question-area').innerText = question1.questionChoice1;
+    document.getElementById('btn1').innerText = question1.choices[0];
+    document.getElementById('btn2').innerText = question1.choices[1];
+    document.getElementById('btn3').innerText = question1.choices[2];
+    document.getElementById('btn4').innerText = question1.choices[3];
+    // if(btn3){
+    //     displayCorrectResult
+    // }
+    // else {
+    //     displayWrongResult
+    // };     
+    };
 
-function ShowQuestion()
+showQuestion1();
 
-    //use querySelectorAll make sure to loop thru the whole array so all buttons work 
+function showQuestion2(){
+  
+    document.getElementById('question-area').innerText = question2.questionChoice2;
+    document.getElementById('btn1').innerText = question2.choices2[0];
+    document.getElementById('btn2').innerText = question2.choices2[1];
+    document.getElementById('btn3').innerText = question2.choices2[2];
+    document.getElementById('btn4').innerText = question2.choices2[3];
+    // if(btn4) {
+    //     displayCorrectResult()
+    // }
+    //     else {
+    //        displayWrongResult
+    //     }
+    };
 
-/*
-   function askQuestion() {
-        var randomQuestion = Math.floor(Math.random() * questionsArray.length); // 0 to 2
-        question = questionsArray[randomQuestion]; 
-        output.innerHTML = question; 
-   }
-    
-   
-   // if ((question === "what does CSS stand for") &&
- //  (answer === "Cascading Style Sheets") 
+    function displayCorrectResult() {
+        rightContainer.style.display = "block";
+    };
 
-
-
-
-
-
-
-// function changeQuestion()
-
-function startQuiz()
-
-function timer()
- 
-function askQuestion()
-
-function AnswerQuestion() 
-
-*/
+    function displayWrongResult() {
+        wrongContainer.style.display = "block";
+    };
